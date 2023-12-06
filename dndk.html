@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Header.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="images/logo2018-1.png" />
+    <title>Đăng nhập - TDMU ID</title>
+    <style>
+        body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;}
+        .forgot-css1 {
+        background-color: #fff;
+        border-radius: 40px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        text-align: center;
+        width: 400px;}
+        .logo{
+            margin-bottom: 20px;
+        }
+        .forgot-css1 h6{
+        margin-top: 0;}
+        .forgot-css1 input[type="text"],
+        .forgot-css1 input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        outline: none;}
+        .forgot-css1 button {
+        width: 30%;
+        padding: 10px;
+        margin-bottom:0px;
+        margin-top: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;}
+        .forgot-css1 button:hover {
+        background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <div class="forgot-css1">
+                        <form method="post" action="#">
+                            <div clas="logo"><img src="images/favicon.jpg" alt="Logo">
+                            </div>
+                            <h6 class="text-center">Quên mật khẩu - TDMU ID</h6>
+                            <div id="step1" >
+                            <div class="form-group">
+                                <i class='fas fa-user-alt float-left'></i><br>
+                                <input type="text" id="hsCode" class="form-control" size="13" tabindex="1" placeholder="Mã số sinh viên/Mã số cán bộ giảng viên" autocomplete="off" required autofocus>
+                            </div>
+
+                            <div class="form-group ">
+                                <i style="float:left" class="material-icons">&#xe0be;</i><br>
+                                <input type="text" id="email" class="form-control" size="30" tabindex="2" placeholder="Example@student.tdmu.vn" autocomplete="off" required autofocus>
+                            </div>
+                            <div class="form-check">
+                            <div style="float:left">
+                                <input class="form-check-input" type="checkbox" name="rememberMe" id="rememberMe" value="true"/>
+                                <label class="form-check-label" for="rememberMe">Lưu thông tin</label>
+                            </div>
+                            </div>
+                            <br>
+                            <button type="submit" onclick="sendEmail()">Gửi</button>
+                            <p id="status"></p>
+                            </div>
+                        
+                        <div id="step2"  style="display: none;">
+                            <div class="form-group">
+                                <input type="password" id="newPassword" class="form-control" size="15" tabindex="1"placeholder="Mật khẩu mới" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="confirmPassword" class="form-control" size="15" tabindex="2"placeholder="Nhập lại mật khẩu mới" required>
+                            </div>
+                            <button onclick="changePassword()">Đổi mật khẩu</button>
+                            <p id="changeStatus"></p>
+                        </div>
+                        </form>
+    </div>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
